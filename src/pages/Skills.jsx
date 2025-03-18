@@ -12,39 +12,40 @@ const textVariant = {
 
 const Skills = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* First Skills Box - Technical Skills */}
+    <div className="flex flex-col justify-center items-center min-h-screen bg-black px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+        {/* Technical Skills Box */}
         <motion.div
-          className="bg-gray-300 p-8 rounded-lg shadow-lg max-w-2xl flex flex-col items-center border border-transparent"
-          initial="hidden"
-          animate="visible"
+          className="bg-gray-300 p-8 rounded-lg shadow-lg w-[90%] md:w-[45%] flex flex-col items-center border border-transparent mx-auto"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           whileHover={{
-            scale: 1.05,
-            boxShadow: "0px 0px 20px 5px rgba(0, 255, 255, 0.9)",
+            scale: 1.04,
+            boxShadow: "0px 0px 20px 5px rgba(0, 255, 255, 0.9)", // Cyan glow
             borderColor: "rgba(0, 255, 255, 0.8)",
             transition: { duration: 0.3, ease: "easeInOut" },
           }}
         >
-          {/* Animated Heading */}
+          {/* Heading */}
           <motion.h1
-            className="text-3xl font-bold mb-4"
+            className="text-3xl font-bold mb-4 text-black"
             variants={textVariant}
             initial="hidden"
             animate="visible"
             custom={0}
           >
-            SKILLS
+            💻 Technical Skills
           </motion.h1>
 
-          {/* Animated Skill List */}
-          <div className="text-gray-700 space-y-2">
+          {/* Skill List */}
+          <div className="text-gray-800 space-y-2 text-center">
             {[
-              "🔹 Programming Languages: Python | SQL | JavaScript",
-              "🔹 Web Development: HTML | CSS | Tailwind CSS | React.js | Django | Frappe",
+              "🔹 Programming: Python | SQL | JavaScript",
+              "🔹 Web Dev: HTML | CSS | Tailwind CSS | React | Django | Frappe",
               "🔹 Database: MySQL",
-              "🔹 Machine Learning & AI: Pandas | NumPy",
-              "🔹 Tools & DevOps: GitHub | Postman",
+              "🔹 AI & ML: Pandas | NumPy",
+              "🔹 Tools: GitHub | Postman",
             ].map((skill, index) => (
               <motion.p key={index} variants={textVariant} custom={index + 1}>
                 {skill}
@@ -53,31 +54,32 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Second Skills Box - Soft Skills */}
+        {/* Soft Skills Box */}
         <motion.div
-          className="bg-gray-300 p-8 rounded-lg shadow-lg max-w-2xl flex flex-col items-center border border-transparent"
-          initial="hidden"
-          animate="visible"
+          className="bg-gray-300 p-8 rounded-lg shadow-lg w-[90%] md:w-[45%] flex flex-col items-center border border-transparent mx-auto"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           whileHover={{
-            scale: 1.05,
-            boxShadow: "0px 0px 20px 5px rgba(255, 0, 255, 0.9)",
+            scale: 1.04,
+            boxShadow: "0px 0px 20px 5px rgba(255, 0, 255, 0.9)", // Magenta glow
             borderColor: "rgba(255, 0, 255, 0.8)",
             transition: { duration: 0.3, ease: "easeInOut" },
           }}
         >
-          {/* Animated Heading */}
+          {/* Heading */}
           <motion.h1
-            className="text-3xl font-bold mb-4"
+            className="text-3xl font-bold mb-4 text-black"
             variants={textVariant}
             initial="hidden"
             animate="visible"
             custom={0}
           >
-            SOFT SKILLS
+            🎯 Soft Skills
           </motion.h1>
 
-          {/* Animated Soft Skills List */}
-          <div className="text-gray-700 space-y-2">
+          {/* Soft Skills List */}
+          <div className="text-gray-800 space-y-2 text-center">
             {[
               "💡 Problem-Solving",
               "💡 Strong Communication",

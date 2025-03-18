@@ -10,9 +10,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-black">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-black px-4">
       {/* Animated Text at the Top */}
-      <div className="absolute top-24 left-10 text-white text-6xl font-bold">
+      <div className="absolute top-16 sm:top-24 left-5 sm:left-10 text-white text-4xl sm:text-6xl font-bold">
         {/* "HELLO." Animation */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -24,7 +24,7 @@ const Home = () => {
         </motion.h1>
 
         {/* "I'M TAMILARASAN" Letter-by-letter Animation */}
-        <h1 className="flex">
+        <h1 className="flex text-2xl sm:text-4xl">
           {Array.from("I'M Tamilarasan").map((letter, index) => (
             <motion.span
               key={index}
@@ -39,13 +39,13 @@ const Home = () => {
         </h1>
 
         {/* "Fullstack Developer" Letter-by-letter Animation */}
-        <p className="text-2xl gap-1.5 flex">
+        <p className="text-lg sm:text-2xl flex">
           {Array.from("Fullstack Developer").map((letter, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: (index + 12) * 0.1 }} // Delays start after name animation
+              transition={{ duration: 0.3, delay: (index + 12) * 0.1 }}
               className="inline-block"
             >
               {letter}
@@ -56,7 +56,7 @@ const Home = () => {
 
       {/* Floating Summary Box */}
       <motion.div
-        className="bg-gray-300 p-8 rounded-lg -mb-40 shadow-lg max-w-2xl text-center border border-transparent"
+        className="bg-gray-300 p-6 sm:p-8 rounded-lg shadow-lg max-w-md sm:max-w-2xl text-center border border-transparent mt-20 sm:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1, y: [0, -5, 0] }}
         transition={{
@@ -73,7 +73,7 @@ const Home = () => {
       >
         {/* Animated Heading */}
         <motion.h1
-          className="text-3xl font-bold mb-4"
+          className="text-xl sm:text-3xl font-bold mb-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -82,7 +82,7 @@ const Home = () => {
         </motion.h1>
 
         {/* Animated Paragraphs (Line by Line) */}
-        <div className="text-gray-700 space-y-2">
+        <div className="text-gray-700 space-y-2 text-sm sm:text-base">
           {summaryText.map((line, index) => (
             <motion.p
               key={index}
