@@ -12,11 +12,11 @@ const textVariant = {
 
 const Skills = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-black px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-black px-4 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
         {/* Technical Skills Box */}
         <motion.div
-          className="bg-gray-300 p-8 rounded-lg shadow-lg w-[90%] md:w-[45%] flex flex-col items-center border border-transparent mx-auto"
+          className="bg-gray-300 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md md:max-w-lg mx-auto flex flex-col items-center border border-transparent"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -29,7 +29,7 @@ const Skills = () => {
         >
           {/* Heading */}
           <motion.h1
-            className="text-3xl font-bold mb-4 text-black"
+            className="text-2xl md:text-3xl font-bold mb-4 text-black"
             variants={textVariant}
             initial="hidden"
             animate="visible"
@@ -56,7 +56,7 @@ const Skills = () => {
 
         {/* Soft Skills Box */}
         <motion.div
-          className="bg-gray-300 p-8 rounded-lg shadow-lg w-[90%] md:w-[45%] flex flex-col items-center border border-transparent mx-auto"
+          className="bg-gray-300 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md md:max-w-lg mx-auto flex flex-col items-center border border-transparent"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -69,7 +69,7 @@ const Skills = () => {
         >
           {/* Heading */}
           <motion.h1
-            className="text-3xl font-bold mb-4 text-black"
+            className="text-2xl md:text-3xl font-bold mb-4 text-black"
             variants={textVariant}
             initial="hidden"
             animate="visible"

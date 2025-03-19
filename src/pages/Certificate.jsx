@@ -40,11 +40,14 @@ const Certification = () => {
             details:
               "2nd IEEE International Conference on Data Science and Network Security (ICDSNS - 2024)",
             color: "rgba(255, 0, 255, 0.8)",
+            isLast: true, // Indicate that this is the last item
           },
-        ].map((cert, index) => (
+        ].map((cert, index, arr) => (
           <motion.div
             key={index}
-            className="bg-gray-300 p-8 rounded-lg shadow-lg text-center border-2 border-transparent"
+            className={`bg-gray-300 p-8 rounded-lg shadow-lg text-center border-2 border-transparent
+              ${cert.isLast ? "lg:col-span-3 mx-auto" : ""} 
+            `}
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}

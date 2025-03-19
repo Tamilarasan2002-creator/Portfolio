@@ -6,7 +6,7 @@ const textVariant = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3, duration: 0.5, ease: "easeOut" },
+    transition: { delay: i * 0.2, duration: 0.5, ease: "easeOut" },
   }),
 };
 
@@ -28,10 +28,11 @@ const Experience = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-black px-4 space-y-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black px-6 py-20 overflow-hidden">
       {/* Main Experience Box */}
       <motion.div
-        className="bg-gray-300 p-8 rounded-lg shadow-lg text-center border border-transparent cursor-pointer w-[90%] md:w-[60%] max-w-3xl"
+        className="bg-gray-300 p-6 sm:p-8 rounded-lg shadow-lg text-center border border-transparent cursor-pointer 
+        w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
         initial="hidden"
         animate="visible"
         whileHover={{
@@ -43,7 +44,7 @@ const Experience = () => {
       >
         {/* Animated Heading */}
         <motion.h2
-          className="text-2xl font-bold mb-2 text-black"
+          className="text-xl sm:text-2xl font-bold mb-3 text-black"
           variants={textVariant}
           initial="hidden"
           animate="visible"
@@ -54,7 +55,7 @@ const Experience = () => {
 
         {/* Animated Company Name */}
         <motion.p
-          className="text-gray-800 font-semibold"
+          className="text-gray-800 font-semibold text-base sm:text-lg"
           variants={textVariant}
           initial="hidden"
           animate="visible"
@@ -64,7 +65,7 @@ const Experience = () => {
         </motion.p>
 
         {/* Animated List of Experience */}
-        <ul className="text-gray-800 text-left list-disc list-inside mt-4 leading-relaxed">
+        <ul className="text-gray-800 text-left list-disc list-inside mt-4 leading-relaxed text-sm sm:text-base px-4">
           {experienceDetails.map((item, index) => (
             <motion.li
               key={index}
@@ -82,7 +83,7 @@ const Experience = () => {
 
       {/* Hands-on Experience Box with Scroll-up Animation */}
       <motion.div
-        className="bg-purple-600 text-white p-4 rounded-lg shadow-lg text-center border w-[90%] md:w-[30%] max-w-lg cursor-pointer"
+        className="bg-purple-600 text-white p-4 sm:p-5 rounded-lg shadow-lg text-center border w-full max-w-xs sm:max-w-sm md:max-w-md cursor-pointer mt-6"
         variants={scrollUpVariant}
         initial="hidden"
         animate="visible"
@@ -92,8 +93,8 @@ const Experience = () => {
           transition: { duration: 0.4, ease: "easeInOut" },
         }}
       >
-        <h3 className="text-lg font-semibold">🛠 Hands-on Experience</h3>
-        <p className="text-sm mt-2">
+        <h3 className="text-lg sm:text-xl font-semibold">🛠 Hands-on Experience</h3>
+        <p className="text-sm sm:text-base mt-2">
           Worked on real-world projects using Python, SQL, JS, Django, React, and Frappe.
         </p>
       </motion.div>
